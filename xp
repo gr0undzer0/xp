@@ -17,7 +17,8 @@ elif [ "$OPTION" = "-h" ]
 then
 echo "XP - A todo.sh module designed to print a readable guide of what you've accomplished in any number of days."
 echo "Usage:"
-echo "      todo.sh xp [-oh] argument "
+echo "      todo.sh xp [-oh] days "
+echo "            days: Number of days ago."
 echo "      Options:"
 echo "              o : Omit days on which no tasks were completed" 
 echo "              h : Print this help message." 
@@ -25,6 +26,7 @@ exit
 else
 echo "Usage:"
 echo "      todo.sh xp [-oh] argument "
+echo "            days: Number of days ago."
 echo "      Options:"
 echo "              o : Omit days on which no tasks were commited." 
 echo "              h : Print this help message." 
