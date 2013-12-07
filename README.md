@@ -22,7 +22,7 @@ Usage:
               h : Print this help message.
 
 Contact:
+
    xp: christopher.donald.jones@gmail.com or https://github.com/gr0undzer0/xp
-   
    
    todo.txt: http://blog.todotxt.com/ or https://github.com/ginatrapani/todo.txt-cli 
