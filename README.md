@@ -1,7 +1,7 @@
 xp
 ==
 
-XP - A todo.txt module designed to print a redable guide of your acomplishments. 
+XP - A todo.txt module designed to print a readable guide of your acomplishments. 
 
  Currently XP prints the tasks completed on each day starting (x) number of days ago. 
 
