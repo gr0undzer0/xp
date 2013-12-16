@@ -20,6 +20,10 @@ Usage:
         Options:
               o : Omit days on which no tasks were commited.
               h : Print this help message.
+              
+Notes: 
+     If You experience bad enterpreter errors:
+     Please check for the location of bash. I test on fedora where everything has been moved to /usr/bin.
 
 Contact:
 
