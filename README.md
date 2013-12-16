@@ -22,7 +22,7 @@ Usage:
               h : Print this help message.
               
 Notes: 
-     If You experience bad enterpreter errors:
+     If You experience bad interpreter errors:
      Please check for the location of bash. I test on fedora where everything has been moved to /usr/bin.
 
 Contact:
