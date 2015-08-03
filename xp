@@ -6,31 +6,33 @@
 re='^[0-9]+$'
 OPTION=$2
 
+usage() {
+  cat <<-END_USAGE
+
+	    xp [-o] N_DAYS
+	      Print a readable guide of what you've accomplished in the last N_DAYS."
+	     The -o option ommit days on which no tasks were commited."
+	END_USAGE
+}
+
+if  [ "$1" = "usage"  -o  x"$1" = x"--help" ]; then 
+  usage
+  exit
+fi
 
 if [[ "$OPTION" =~ $re ]] 
 then
-DAYS=$2
+  DAYS=$2
 elif [ "$OPTION" = "-o" ]
 then
-DAYS=$3
+  DAYS=$3
 elif [ "$OPTION" = "-h" ]
 then
-echo "XP - A todo.sh module designed to print a readable guide of what you've accomplished in any number of days."
-echo "Usage:"
-echo "      todo.sh xp [-oh] days "
-echo "            days: Number of days ago."
-echo "      Options:"
-echo "              o : Omit days on which no tasks were completed" 
-echo "              h : Print this help message." 
-exit
+  usage
+  exit
 else
-echo "Usage:"
-echo "      todo.sh xp [-oh] argument "
-echo "            days: Number of days ago."
-echo "      Options:"
-echo "              o : Omit days on which no tasks were commited." 
-echo "              h : Print this help message." 
-exit
+  usage
+  exit
 fi;
 
 gnudate() {
