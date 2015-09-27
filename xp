@@ -49,8 +49,16 @@ DAY=$((604800 / 7))
 for i in $(eval echo "{$DAYS..0}")
 do
 DAYX=$(($TODAY - $DAY * $i))
-DAYTITLE=$(gnudate -d "@"$DAYX +%Y-%m-%d\ )
-DAYWORD=$(gnudate -d $DAYTITLE +%A)
+case $OSTYPE in
+  darwin*)
+    DAYTITLE=$(date -r $DAYX +%Y-%m-%d\ )
+    DAYWORD=$(date  -r $DAYX +%A)
+    ;;
+  *)
+    DAYTITLE=$(gnudate -d "@"$DAYX +%Y-%m-%d\ )
+    DAYWORD=$(gnudate -d $DAYTITLE +%A)
+    ;;
+esac
 DAYCONTENT=$(grep $DAYTITLE $DONE_FILE)
 
 if [[ -z "$DAYCONTENT" && "$OPTION" != -o  ]]
