@@ -11,7 +11,7 @@ usage() {
 
 	    xp [-o] N_DAYS
 	      Print a readable guide of what you've accomplished in the last N_DAYS."
-	     The -o option ommit days on which no tasks were commited."
+	     The -o option ommits days on which no tasks were commited."
 	END_USAGE
 }
 
