@@ -45,7 +45,7 @@ gnudate() {
 
 TODAY=$(gnudate +%s)
 WEEK=604800
-DAY=$((604800 / 7))
+DAY=$(($WEEK / 7))
 for i in $(eval echo "{$DAYS..0}")
 do
 DAYX=$(($TODAY - $DAY * $i))
@@ -59,7 +59,7 @@ case $OSTYPE in
     DAYWORD=$(gnudate -d $DAYTITLE +%A)
     ;;
 esac
-DAYCONTENT=$(grep $DAYTITLE $DONE_FILE)
+DAYCONTENT=$(grep "x $DAYTITLE" $DONE_FILE)
 
 if [[ -z "$DAYCONTENT" && "$OPTION" != -o  ]]
 then
