@@ -8,10 +8,9 @@ OPTION=$2
 
 usage() {
   cat <<-END_USAGE
-
 	    xp [-o] N_DAYS
-	      Print a readable guide of what you've accomplished in the last N_DAYS."
-	     The -o option ommits days on which no tasks were commited."
+	      Print a readable guide of what you've accomplished in the last N_DAYS.
+	      The -o option omits days on which no tasks were committed.
 	END_USAGE
 }
 
